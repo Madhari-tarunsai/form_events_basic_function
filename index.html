@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_events</title>
+</head>
+<body style="background-color: burlywood;">
+    
+    <h1 style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center;">form_event_function</h1>
+
+    <form id="form">
+        <label for="number">Enter_ur_no:-</label>
+        <input type="text" id="number">
+        <input type="submit">
+        <h2 id="id"></h2>
+        <script>
+            let x=document.getElementById("form")
+            let h2=document.getElementById("id")
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                let num =(document.getElementById("number").value);
+                if(!isNaN(num)){
+                    if(num%2==0){
+                        h2.innerHTML="Even_number"
+                    }
+                    else{
+                        h2.innerHTML="odd_number"
+                    }
+                }else{
+                    h2.innerHTML="please enter vaild number"
+                }
+            })
+        </script>
+
+    </form>
+</body>
+</html>
